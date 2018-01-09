@@ -10,9 +10,23 @@ class SiteController {
         $categories = Category::getCategoryList();
         
         $products = array();
-        $products = Product::getProduct();
+        $products = Product::getProducts();
         
         require_once ROOT.'/views/site/index.php';
+        
+        return true;
+    }
+    
+    
+    public function actionView($id) {
+        
+        $categories = array();
+        $categories = Category::getCategoryList();
+        
+        $product = array();
+        $product = Product::getProduct($id);
+        
+        require_once ROOT.'/views/site/view.php';
         
         return true;
     }

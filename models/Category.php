@@ -12,7 +12,7 @@ class Category {
             
             $categoryList = array();
             
-            $result = $db->query('SELECT id, title  FROM categories');
+            $result = $db->query('SELECT id, title FROM categories');
             
             $i = 0;
             while($row = $result->fetch()){

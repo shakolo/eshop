@@ -7,13 +7,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Home | E-Shopper</title>
-    <link href="eshop/template/css/bootstrap.min.css" rel="stylesheet">
-    <link href="eshop/template/css/font-awesome.min.css" rel="stylesheet">
-    <link href="eshop/template/css/prettyPhoto.css" rel="stylesheet">
-    <link href="eshop/template/css/price-range.css" rel="stylesheet">
-    <link href="eshop/template/css/animate.css" rel="stylesheet">
-	<link href="eshop/template/css/main.css" rel="stylesheet">
-	<link href="eshop/template/css/responsive.css" rel="stylesheet">
+    <link href="/eshop/template/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/eshop/template/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/eshop/template/css/prettyPhoto.css" rel="stylesheet">
+    <link href="/eshop/template/css/price-range.css" rel="stylesheet">
+    <link href="/eshop/template/css/animate.css" rel="stylesheet">
+	<link href="/eshop/template/css/main.css" rel="stylesheet">
+	<link href="/eshop/template/css/responsive.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="eshop/template/js/html5shiv.js"></script>
     <script src="eshop/template/js/respond.min.js"></script>
