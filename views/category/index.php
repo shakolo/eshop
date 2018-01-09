@@ -41,7 +41,7 @@
 							</div>
 						</div><?php endforeach?>
 
-						
+						<?php include ROOT . '/views/layouts/pargination.php'; ?>
 					</div><!--features_items-->
 					
 

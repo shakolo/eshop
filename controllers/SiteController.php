@@ -4,19 +4,18 @@ include_once ROOT . '/models/Product.php';
 
 class SiteController {
     
-    public function actionIndex() {
+    public function actionCatalog($page = 1) {
         
         $categories = array();
         $categories = Category::getCategoryList();
         
         $products = array();
-        $products = Product::getProducts();
+        $products = Product::getProducts($page);
         
         require_once ROOT.'/views/site/index.php';
         
         return true;
     }
-    
     
     public function actionView($id) {
         

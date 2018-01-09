@@ -8,12 +8,16 @@
 
 
 class Product {
-        public static function getProducts() {
+    const SHOW_BY_DEFAULT = 3;
+        public static function getProducts($page = 1) {
             $db = Db::getConnection();
-            
+            $page = intval($page);
+            $offset = ($page - 1) * self::SHOW_BY_DEFAULT;          
             $productItem = array();
             
-            $result = $db->query('SELECT id, title, parent, image, price  FROM products LIMIT 6');
+            $result = $db->query("SELECT id, title, parent, image, price  FROM products "
+                . "LIMIT " . self::SHOW_BY_DEFAULT
+                . " OFFSET " . $offset);
             
             $i = 0;
             while($row = $result->fetch()){
@@ -27,12 +31,17 @@ class Product {
             
             return $productItem;
         }
-       public static function getProductByCategory($id) {
+       public static function getProductByCategory($id, $page) {
             $db = Db::getConnection();
             
+            $page = intval($page);
+            $offset = ($page - 1) * self::SHOW_BY_DEFAULT;
             $productItem = array();
             
-            $result = $db->query("SELECT id, title, parent, image, price FROM products WHERE parent = '$id' LIMIT 6");
+            $result = $db->query("SELECT id, title, parent, image, price FROM products WHERE parent = '$id' "
+                . "LIMIT ".self::SHOW_BY_DEFAULT
+                . ' OFFSET ' .$offset
+                    );
             
             $i = 0;
             while($row = $result->fetch()){
