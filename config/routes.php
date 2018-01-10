@@ -8,6 +8,7 @@ return array(
      'page-([0-9]+)' => 'site/catalog/$1',
     'user/register' => 'user/register', 
     'user/login' => 'user/login', 
+    'user/logout' => 'user/logout', 
     'cabinet' => 'cabinet/index', 
      '' => 'site/catalog',
 //    'test2/news/([0-9]+)' => 'news/view/$1',
