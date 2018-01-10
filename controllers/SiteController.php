@@ -1,6 +1,7 @@
 <?php
 include_once ROOT . '/models/Category.php';
 include_once ROOT . '/models/Product.php';
+include_once ROOT . '/components/Pagination.php';
 
 class SiteController {
     
@@ -12,7 +13,11 @@ class SiteController {
         $products = array();
         $products = Product::getProducts($page);
         
-        require_once ROOT.'/views/site/index.php';
+        $total = Product::getTotalProducts();
+        
+        $pagination = new Pagination($total, $page, Product::SHOW_BY_DEFAULT, 'page-');
+        
+                require_once ROOT.'/views/site/index.php';
         
         return true;
     }

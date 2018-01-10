@@ -72,6 +72,31 @@ class Product {
             
             return $product;
         }
+
+    public static function getTotalProductByCategory($id) {
+        $db = Db::getConnection();
+        
+        $result = $db->query("SELECT count(id) AS count FROM products WHERE parent = '$id' "
+                    );
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+        $result = $result->fetch();
+        
+        return $result['count'];
+        
+        
     }
+
+    public static function getTotalProducts() {
+               $db = Db::getConnection();
+        
+        $result = $db->query("SELECT count(id) AS count FROM products"
+                    );
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+        $row = $result->fetch();
+        
+        return $row['count']; 
+    }
+
+}
     
 ?>
