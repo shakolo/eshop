@@ -6,6 +6,7 @@ return array(
     'view/([0-9]+)' => 'site/view/$1',
      'catalog/page-([0-9]+)' => 'site/catalog/$1',
      'page-([0-9]+)' => 'site/catalog/$1',
+    'user/register' => 'user/register', 
      '' => 'site/catalog',
 //    'test2/news/([0-9]+)' => 'news/view/$1',
 //    'test2/news' => 'news/index',
