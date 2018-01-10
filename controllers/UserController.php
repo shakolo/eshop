@@ -38,7 +38,7 @@ class UserController {
             } else {
                 User::auth($userId);
                 
-                header('cabinet');
+                header('Location: /cabinet/');
             }
         }
         
