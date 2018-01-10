@@ -35,4 +35,12 @@ class User {
         
     }
 
+    public static function checkUserData($email, $password) {
+        
+    }
+
+    public static function auth($userId) {
+        
+    }
+
 }
