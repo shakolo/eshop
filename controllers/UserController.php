@@ -46,7 +46,7 @@ class UserController {
         return true;
     }
     public function actionLogout() {
-        session_start();
+
         unset($_SESSION['user']);
         header("Location: /");
     }

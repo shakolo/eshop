@@ -19,14 +19,14 @@
 											<img src="/eshop/template/images/home/<?php echo $product['image']?>" alt="" />
 											<h2><?php echo $product['price']?></h2>
 											<p><?php echo $product['title']?></p>
-											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+											<a href="/cart/add/<?php echo $product['id'];?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 										</div>
 										<div class="product-overlay">
                                                                                     <a href ="/view/<?php echo $product['id'] ?>">
 											<div class="overlay-content">
 												<h2><?php echo $product['price']?></h2>
 												<p><?php echo $product['title']?></p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+												<a href="/cart/add/<?php echo $product['id'];?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
                                                                                     </a>
 										</div>
