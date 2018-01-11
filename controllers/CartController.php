@@ -8,4 +8,9 @@ class CartController {
         header("Location: $referrer");
         return true;
     }
+    public function actionAddAjax($id) {
+        echo Cart::addProduct($id);
+
+        return true;
+    }
 }

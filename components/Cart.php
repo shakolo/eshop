@@ -26,6 +26,7 @@ public static function addProduct($id)
         // Возвращаем количество товаров в корзине
 //        unset($_SESSION['products']);
 //        echo '<pre>';print_r($_SESSION);die();
+        return self::countItems();
     }
     
      public static function countItems()
