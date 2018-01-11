@@ -21,10 +21,29 @@ public static function addProduct($id)
             $productsInCart[$id] = 1;
         }
         // Записываем массив с товарами в сессию
+//        $_SESSION['products'][$id] = 1;
         $_SESSION['products'] = $productsInCart;
         // Возвращаем количество товаров в корзине
 //        unset($_SESSION['products']);
-        echo '<pre>';print_r($_SESSION);die();
+//        echo '<pre>';print_r($_SESSION);die();
     }
+    
+     public static function countItems()
+    {
+        // Проверка наличия товаров в корзине
+        if (isset($_SESSION['products'])) {
+            // Если массив с товарами есть
+            // Подсчитаем и вернем их количество
+            $count = 0;
+            foreach ($_SESSION['products'] as $id => $quantity) {
+                $count = $count + $quantity;
+            }
+            return $count;
+        } else {
+            // Если товаров нет, вернем 0
+            return 0;
+        }
+    }
+
 }
 
