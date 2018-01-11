@@ -9,7 +9,7 @@ return array(
     'user/register' => 'user/register', 
     'user/login' => 'user/login', 
     'user/logout' => 'user/logout', 
-    
+    'cart/add/([0-9]+)' => 'cart/add/$1',
     'cabinet' => 'cabinet/index', 
      '' => 'site/catalog',
 //    'test2/news/([0-9]+)' => 'news/view/$1',
